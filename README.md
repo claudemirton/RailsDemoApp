@@ -24,14 +24,6 @@ The main target was developing a simple rails app with local storage, http based
 ## Backend instructions
 -----------
 
-### Database - MySQL
-```
-1. mysql -uroot -p
-2. CREATE DATABASE tasklist;
-3. CREATE USER 'tasklist'@'localhost' identified WITH mysql_native_password by 'tasklist';
-4. GRANT ALL on tasklist.* to 'tasklist'@'localhost';
-5. quit
-```
 ### Ruby/Rails
 ```
 1. Go to root folder
