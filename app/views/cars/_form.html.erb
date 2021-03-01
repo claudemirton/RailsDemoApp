@@ -1,0 +1,42 @@
+<%= form_with(model: @car, local: true) do |form| %>
+
+  <% if @car.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger" role="alert">
+      <h4>
+        <%= pluralize(@car.errors.count, "error") %> prohibited
+        this car from being saved:
+      </h4>
+      <ul>
+        <% @car.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :make, class: 'form-label' %>
+    <%= form.text_field :make, class: 'form-control', placeholder: 'Ford' %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :model, class: 'form-label' %>
+    <%= form.text_field :model, class: 'form-control', placeholder: 'Eco Sport' %>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <%= form.label :year, class: 'form-label' %>
+      <%= form.text_field :year,  class: 'form-control', placeholder: '2021' %>
+   </div>
+    <div class="col">
+      <%= form.label :color, class: 'form-label' %>
+      <%= form.text_field :color,  class: 'form-control', placeholder: 'Branca' %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <%= form.label :description, class: 'form-label' %>
+    <%= form.text_area :description, class: 'form-control', 
+    placeholder: 'Descreva capacidade, opcionais e vantagens do modelo.', rows: '4' %>
+  </div>
+  <a href="/admin/" class="btn btn-danger mt-3">Back</a>
+  <button type="submit" name="commit" class="btn btn-primary float-right">Save Car</button>
+<% end %>

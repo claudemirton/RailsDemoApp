@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CarRental</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img  alt="Rails" class="d-inline-block align-top" src="assets/Ruby_On_Rails_Logo.svg.png" width="129"></a>
+       <span  class="navbar-text">
+        <h4>Prebooks a Car</h4>
+        <a href="/admin">Admin</a>
+      </span>
+    </nav>
+    <div class="container"> 
+      <%= yield %>
+    </div>
+  </body>
+</html>

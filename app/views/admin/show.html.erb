@@ -1,0 +1,39 @@
+<% flash.each do |type, msg| %>
+    <% if type != 'error' %>
+        <div class = "alert alert-info">
+            <%= msg %>
+        </div>
+    <% else %>
+        <div class = "alert alert-danger">
+            <%= msg %>
+        </div>
+    <% end %>
+<% end %>
+<div class="card mt-3">
+  <h5 class="card-header"><%= @car.make %> - <%= @car.model %></h5>
+  <div class="card-body">
+    <h5 class="card-title">Characteristics</h5>
+    <p class="card-text"><b>Year:</b> <%= @car.year %></p>
+    <p class="card-text"><b>Color:</b> <%= @car.color %></p>
+    <p class="card-text"><b>Description:</b> <%= @car.description %></p>
+  </div>
+</div>
+
+ <h2 class="mt-3">Pre-Booking</h2>
+  <% @car.rentees.each do |rentee| %>
+    <div class="card mt-3">
+      <h5 class="card-header"><%= rentee.name %></h5>
+      <div class="card-body">
+        <p class="card-text"><b>Phone:</b> <%= rentee.phone %></p>
+        <p class="card-text"><b>Email:</b> <%= rentee.email %>
+        <%= link_to 'Remove Booking', [rentee.car, rentee],
+               method: :delete,
+               data: { confirm: 'Are you sure?' },
+               class:'btn btn-danger btn-sm float-right' %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+
+<a href="/admin/" class="btn btn-danger mt-3">Back</a>
+
