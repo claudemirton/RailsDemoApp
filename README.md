@@ -4,7 +4,9 @@
 
 # Summary
 ```
-The main target was developing a simple rails app with local storage, http based AUTH, nested models and do not use scaffold in the process. For accessing the /admin path or any other protected one please use the following auth info: *user*:admin, *password*:nimda
+The main target was developing a simple rails app with local storage, http based AUTH, 
+nested models and do not use scaffold in the process. For accessing the /admin path 
+or any other protected one please use the following auth info: **user**:admin, **password**:nimda
 
 ```
 
@@ -21,7 +23,7 @@ The main target was developing a simple rails app with local storage, http based
 -----------
 
 
-## Backend instructions
+## Instructions
 -----------
 
 ### Ruby/Rails
