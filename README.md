@@ -32,3 +32,10 @@ or any other protected one please use the following auth info - user:admin, pass
 2. Execute 'rails -s'
 
 Verify on http://localhost:3000
+```
+
+### Heroku Deployment
+```
+1. Go to https://rails-car-rental.herokuapp.com
+
+
