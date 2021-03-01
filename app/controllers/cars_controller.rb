@@ -49,10 +49,10 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
     if @car.destroy
       flash[:success] = 'Car was successfully deleted.'
-      redirect_to cars_url
+      redirect_to '/admin'
     else
       flash[:error] = 'Something went wrong'
-      redirect_to cars_url
+      redirect_to '/admin'
     end
   end
   
